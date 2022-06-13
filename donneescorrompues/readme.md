@@ -1,16 +1,16 @@
-**Objectif :** Dans ce challenge, comme l'énoncé le suggère, on reçoit en se connectant au Netcat indiqué, des fragments de base 64; en tout cas, c'est ce qu'il semble au premier abord.
+**Objectif :** Dans ce challenge, comme l'Ã©noncÃ© le suggÃ¨re, on reÃ§oit en se connectant au Netcat indiquÃ©, des fragments de base 64; en tout cas, c'est ce qu'il semble au premier abord.
 
-Une tentative de les décompresser fait apparaître plusieurs caractères non ascii à l'intérieur de la chaîne de caractères.
-Ces caractères n'ayant pas le bon code perturbent le décodage des chaînes du fichier.
+Une tentative de les dÃ©compresser fait apparaÃ®tre plusieurs caractÃ¨res non ascii Ã  l'intÃ©rieur de la chaÃ®ne de caractÃ¨res.
+Ces caractÃ¨res n'ayant pas le bon code perturbent le dÃ©codage des chaÃ®nes du fichier.
 
-Or, ces caractères ne semblent pas "choisis" au hasard : ce sont des caractères provenant d'un autre alphabet (peut-être cyrillique, mais peu importe) très proches de leur représentation ascii.
+Or, ces caractÃ¨res ne semblent pas "choisis" au hasard : ce sont des caractÃ¨res provenant d'un autre alphabet (peut-Ãªtre cyrillique, mais peu importe) trÃ¨s proches de leur reprÃ©sentation ascii.
 
-On va reprendre par un script dédié les chaînes en pseudo-base 64 et remplacer les caractères non ascii par leurs équivalents ascii les plus proches.
+On va reprendre par un script dÃ©diÃ© les chaÃ®nes en pseudo-base 64 et remplacer les caractÃ¨res non ascii par leurs Ã©quivalents ascii les plus proches.
 
-Ensuite, on espère pouvoir décoder le résultat obtenu
+Ensuite, on espÃ¨re pouvoir dÃ©coder le rÃ©sultat obtenu.
 
-Au premier abord, en décodant les premiers caractères, il semble que l'en-tête du fichier commence par les caractères ID3 qui sont en principe typiques de fichiers audio MP3.
+Au premier abord, en dÃ©codant les premiers caractÃ¨res, il semble que l'en-tÃªte du fichier commence par les caractÃ¨res ID3 qui sont en principe typiques de fichiers audio MP3.
 
-On assemble par concaténation les 250 fragments obtenus et on tente d'ouvrir le fichier ainsi produit avec un outil de type VLC (ou autre media player quelconque) : on entend une voix de synthèse féminine qui épelle le contenu du flag.
+On assemble par concatÃ©nation les 250 fragments obtenus et on tente d'ouvrir le fichier ainsi produit avec un outil de type VLC (ou autre media player quelconque) : on entend une voix de synthÃ¨se fÃ©minine qui Ã©pelle le contenu du flag.
 
 Voir la solution.
