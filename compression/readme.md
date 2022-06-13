@@ -1,4 +1,4 @@
-** Objectif :** Dans ce challenge il suffit d'extraine une archive compressée.
+**Objectif :** Dans ce challenge il suffit d'extraine une archive compressée.
 
 Dans un premier temps un simple appel du fichier avec winrar (par exemple) permet de réaliser l'opération.
 
