@@ -1,14 +1,14 @@
-**Objectif :** Dans ce challenge, d'après l'énoncé, on sait que l'échange a lieu à l'aube donc au lever du soleil. Ce détail est important, car le soleil que l'on voit sur l'image se lève à l'est. On recherche des bâtiments reconnaissables que l'on sait placer géographiquement pour placer grossièrement la position. Dans le lointain, on reconnait la tour Part-Dieu appelée "le Crayon" qui est un des bâtiments emblématiques de la ville de Lyon (pour y être allée).
-On remarque que la photo est prise en hauteur car les maisons situées au premier plan sont en contrebas. On a une vue dégagée sur les tours et la distance semble de 1 à 4 km selon qu'il y un zoom ou pas. On semble distinguer également un quartier assez ancien et certaines fenêtres pourraient faire penser à un bâtiment religieux, mais sans évidence absolue.
+**Objectif :** Dans ce challenge, d'aprÃ¨s l'Ã©noncÃ©, on sait que l'Ã©change a lieu Ã  l'aube donc au lever du soleil. Ce dÃ©tail est important, car le soleil que l'on voit sur l'image se lÃ¨ve Ã  l'est. On recherche des bÃ¢timents reconnaissables que l'on sait placer gÃ©ographiquement pour placer grossiÃ¨rement la position. Dans le lointain, on reconnait la tour Part-Dieu appelÃ©e "le Crayon" qui est un des bÃ¢timents emblÃ©matiques de la ville de Lyon (pour y Ãªtre allÃ©e).
+On remarque que la photo est prise en hauteur car les maisons situÃ©es au premier plan sont en contrebas. On a une vue dÃ©gagÃ©e sur les tours et la distance semble de 1 Ã  4 km selon qu'il y un zoom ou pas. On semble distinguer Ã©galement un quartier assez ancien et certaines fenÃªtres pourraient faire penser Ã  un bÃ¢timent religieux, mais sans Ã©vidence absolue.
 
-Avec Google Maps, on prend la position de la tour Part-Dieu direction plein Ouest sur au moins un km puis on cherche une hauteur. Pour cela, il y a une astuce qui est d'utiliser un mode d'affichage de la carte : dans la barre de menu en bas à gauche, on peut faire apparaître le relief.
+Avec Google Maps, on prend la position de la tour Part-Dieu direction plein Ouest sur au moins un km puis on cherche une hauteur. Pour cela, il y a une astuce qui est d'utiliser un mode d'affichage de la carte : dans la barre de menu en bas Ã  gauche, on peut faire apparaÃ®tre le relief.
 
-Pour affiner la représentation, on peut faire apparaître les vues rue par rue en mode en vision panoramique.
-On essaie de repérer des toits ou des murs qui ressemblent à ceux de la photo et l'allure générale du quartier.
+Pour affiner la reprÃ©sentation, on peut faire apparaÃ®tre les vues rue par rue en mode en vision panoramique.
+On essaie de repÃ©rer des toits ou des murs qui ressemblent Ã  ceux de la photo et l'allure gÃ©nÃ©rale du quartier.
 
-On tatonne en se promenant virtuellement un peut peu en trouvant des points de vue très ressemblant ou inversement pas du tout. On s'arrête sur l'avenue du Mont Saint-Barthélémy.
+On tatonne en se promenant virtuellement un petit peu, en trouvant des points de vue trÃ¨s ressemblant ou inversement pas du tout. On s'arrÃªte sur l'avenue du Mont Saint-BarthÃ©lÃ©my.
 
-Une fois la ville et la rue déterminés, le codage du flag est explicite dans l'énoncé en générant le md5. Attention : le tiret (du 6) n'est pas l'underscore (tiret du 8) sinon on se prend un échec.
+Une fois la ville et la rue dÃ©terminÃ©s, le codage du flag est explicite dans l'Ã©noncÃ© en gÃ©nÃ©rant le md5. Attention : le tiret (du 6) n'est pas l'underscore (tiret du 8) sinon on se prend un Ã©chec.
 
 On obtient le flag via un outil d'encodage (tel dcode)
 Voir la solution.
