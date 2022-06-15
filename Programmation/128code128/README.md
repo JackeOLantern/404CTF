@@ -1,37 +1,38 @@
-**Objectif :** Dans ce challenge il y a une phrase qui est affichée encodée en base 64 bits.
+**Objectif :** Dans ce challenge il y a une phrase qui est affichÃ©e encodÃ©e en base 64 bits.
 
-Quand on la décode, on obtient un fichier à en-tête marqué IHDR d'une image au format *.PNG.
+Quand on la dÃ©code, on obtient un fichier Ã  en-tÃªte marquÃ© IHDR d'une image au format *.PNG.
 
-On sauvegarde les bits obtenus par décodage de base 64 : on obtient une image de codebarre.
+On sauvegarde les bits obtenus par dÃ©codage de base 64 : on obtient une image de codebarre.
 
-On s'aperçoit qu'il s'agit de la [0/128] image et qu'il faut rapidement la décoder pour avoir la suivante.
+On s'aperÃ§oit qu'il s'agit de la [0/128] image et qu'il faut rapidement la dÃ©coder pour avoir la suivante.
 
 
-Seule l'automatisation de traitement permet de traiter les 129 images qui sont régénérées distinctes à chaque appel afin d'obtenir le flag problablement après la dernière image exploitée. 
+Seule l'automatisation de traitement permet de traiter les 129 images qui sont rÃ©gÃ©nÃ©rÃ©es distinctes Ã  chaque appel afin d'obtenir le flag problablement aprÃ¨s la derniÃ¨re image exploitÃ©e. 
 
-Un code barre correspond à divers formats possibles
-au vu du titre du challenge : 128 x 128, on comprend qu'il va y avoir 128 images et que le deuxième élément "128" correspond à l'encodage du code barre.
+Un code barre correspond Ã  divers formats possibles
+au vu du titre du challenge : 128 x 128, on comprend qu'il va y avoir 128 images et que le deuxiÃ¨me Ã©lÃ©ment "128" correspond Ã  l'encodage du code barre.
 On a les codes de traduction de toute la table ascii dans la page suivante.
 https://fr.wikipedia.org/wiki/Code_128
 
-Le script fourni fournit les étapes suivantes :
+Le script fourni fournit les Ã©tapes suivantes :
 1. connexion au Netcat
 2. Extraction du texte en base64 de l'image
-3. décodage du texte en base 64
+3. dÃ©codage du texte en base 64
 4. sauvegarde de l'image *.PNG
 
 Pour la traiter automatiquement et pas visuellement, on convertit l'image *.PNG en RGB. 
-On balaie les pixels de la gauche vers la droite avec la détection de lettres sur 11 unités (noires ou blanches successives).
-Attention: il y a ici un piège par rapport au format officiel qui nous a perturbé :
-Il manque le caractère de début et le stop qui devraient être là mais n'y sont pas. On va les ignorer. On lit les bits 11 par 11 (1 pour noir et 0 pour blanc).
-Dès qu'on obtient 11 codes (noirs ou blancs), on décode la lettre.
+On balaie les pixels de la gauche vers la droite avec la dÃ©tection de lettres sur 11 unitÃ©s (noires ou blanches successives).
+Attention: il y a ici un piÃ¨ge par rapport au format officiel qui nous a perturbÃ© :
+Il manque le caractÃ¨re de dÃ©but et le stop qui devraient Ãªtre lÃ  mais n'y sont pas. On va les ignorer. On lit les bits 11 par 11 (1 pour noir et 0 pour blanc).
+DÃ¨s qu'on obtient 11 codes (noirs ou blancs), on dÃ©code la lettre.
 
-Pour ce faire, on créée un dictionnaire à partir de la page wikipedia.
+Pour ce faire, on crÃ©Ã©e un dictionnaire Ã  partir de la page wikipedia.
+
 Par exemple :
 d['10100011000']='A'
 d['11001001110']='4'
 d['10001000110']='C'
 
-Ensuite, on concatène tous les caractères obtenus et on les renvoie sur le serveur. Si la réponse est vue correcte, on obtient du serveur une nouvelle immage et on recommence l'opération. Après la 128ème itération, on obtient le flag pour valider le challenge.
+Ensuite, on concatÃ¨ne tous les caractÃ¨res obtenus et on les renvoie sur le serveur. Si la rÃ©ponse est vue correcte, on obtient du serveur une nouvelle image et on recommence l'opÃ©ration. AprÃ¨s la 128Ã¨me itÃ©ration, on obtient le flag pour valider le challenge.
 
 Voir la solution.
