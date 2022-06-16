@@ -1,0 +1,6 @@
+**Objectif :** Dans ce challenge il y a encore une image masquée en tant que sous-ensemble de données intégrées par l'image au premier plan d'affichage. 
+Il est un prérequis à rappeler : image PNG est constituée d'une signature et d'une série de segments ("chunks"). https://www.commentcamarche.net/contents/1204-png-format-png#format-de-fichier-png. Dans ces segments, sont stockées les propriétés de l'image comme la couleur (R, V, B). Or, dans l'image globale, une première image PNG est déjà extraite et correspondant à l'image affichée courante.
+Une première tentative de scanner les segments ligne par ligne en bas de la séquence de bits de l'image courante, ne conduit qu'à d'abord la mise en exergue d'une zone dense d'éléments, pas interprétable en direct. Il se découvre cette zone inhabituellement dense de segments encapsulée dans une librairie ZLIB. La décomposition des zones de cette deuxième séquence compressée donne l'image que l'on a grossièrement appréhendée, par une reconstruction.
+Le programme de décodage *.PY à l'exécution décrit le procédé d'extraction des données imbriquées dans l'image d'origine avec la condition d'arrêt sur détection de signature. Les bits successifs qui sont bâtis en données comme des pixels, sont restaurés dans leur ensemble au sein d'un fichier.
+
+Voir la solution.
