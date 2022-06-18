@@ -1,7 +1,7 @@
 **Objectif :** Dans ce challenge, on a l'image du challenge précédent qui a été obtenue par l'étape 3 et qui affiche un flag. Il sert de base pour l'étape 4.
 L'énoncé nous précise encore que le fichier est de taille trop élévée par rapport à une compression.
 On regarde à nouveau le contenu comme dans l'étape 3 avec l'éditeur de texte hexa du type HxD et on se focalise sur le début de chaque ligne.
-Hors indice, il est diffile de s'orienter vers une solution simple. Après avoir consulté la norme PNG, il existe un filtre qui est positionné sur le premier octet
+Hors indice, il est difficile de s'orienter vers une solution simple. Après avoir consulté la norme PNG, il existe un filtre qui est positionné sur le premier octet
 de chaque ligne dans les segments en IDAT. En ouvrant avec HxD, on visualise le premier bit sur la première ligne qui vaut ici 0x1;
 puis on avance de 800 *4 +1 octets(800 points par ligne et 4 octets par point plus 1 bit de filtre par ligne)et on trouve un deuxième octet de filtre.
 Comme on ne va pas récupérer 600 octets de filtre ligne par ligne, on passe par un script automatisant l'extraction des octets à la suite.
