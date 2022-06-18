@@ -8,7 +8,7 @@ Comme on ne va pas récupérer 600 octets de filtre ligne par ligne, on passe pa
 Avec le nouveau programme png_deflate.PY, on extrait le fichier : step4_data.dat (l'extraction du fichier PNG source avec le même algo ZLIB de décompression que l'étape 3)
 pour créer le fichier : step4_filter.dat ce dernier étant un sous-ensemble du premier ne contenant que les octets de filtrage.
 L'ouverture du fichier dévoile un contenu avec les octets : 0, 1, 2, 3 ou 4 car les codes de filtres s'étalonnent de 0 à 4 dans la norme PNG). On constate aussi que les octets
-sotn bizarrement répartis : au début, il n'y a que des séquences de 0 à 3 pseudo-aléatoires sans motif répétitif apparent. A partir de la fin, on a de longues séquences de 4
+sont bizarrement répartis : au début, il n'y a que des séquences de 0 à 3 pseudo-aléatoires sans motif répétitif apparent. A partir de la fin, on a de longues séquences de 4
 qui semblent plus organisées. On s'intéresse à la première partie d'ordre variable dans laquelle les patterns n'apparaissent pas. On va décoder ces octets pour les transformer
 en un entier en considérant qu'il est transcrit en base 4 (puisque ne contenant que des octets de 0 à 3); puis cet entier est affiché sous forme de chaine de caractères. 
 La base 4 est affichée en code Hexa et pour chaque chiffre hexa, on prend le caractère ascii correspondant.
