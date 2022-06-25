@@ -1,4 +1,4 @@
-**Objectif :** Dans ce challenge, l'objectif est de dérober un des mots du passe du contrat de Hallebarde installé via la block Chain.
+**Objectif :** Dans ce challenge, l'objectif est d'associer une liste de flags successivement découverts grâce aux injections.
 
 1) contrat : https://www.pensezblockchain.ca/tutoriel-smart-contract
 2) compilateur : https://remix.ethereum.org/
