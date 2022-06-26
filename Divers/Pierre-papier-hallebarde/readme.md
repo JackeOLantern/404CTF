@@ -1,7 +1,7 @@
 **Objectif :** Dans ce challenge, le jeu est impossible à gagner quand on voit le code source : choix_utilisateur = int(input("Choix ?\n> ")
 En fait, on peut s'apercevoir que la faille est présente car la fonction d'entrée évalue la valeur saisie au lieu de la restituer telle quelle
 (il s'agit d'une faille associée aux versions antérieures à python 2.x versus python 3.x à cause du passage de variable par valeurs calculées).
-La petite faille qui a été trouvée : 
+La petite faille qui a été trouvée (rappel des failles historiques https://www.geeksforgeeks.org/vulnerability-input-function-python-2-x/ par là : 
 le input "évalue" ce qu'on saisit
 Par exemple
 saisis 1+1 tu vas voir
